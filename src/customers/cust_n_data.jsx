@@ -3,7 +3,7 @@ import NeoCat from '../img/cust_img_n/neoCat.png'
 
 let cust_n_data = [
   {
-    id: 'a001',
+    id: 'n001',
     contactPerson: "Jaeho Im",
     companyEng: "Nuel Express",
     companyKor: "누엘 익스프레스",
@@ -20,7 +20,7 @@ let cust_n_data = [
   },
 
   {
-    id: 'a002',
+    id: 'n002',
     contactPerson: "Mateo Seo",
     companyEng: "Neo Cat Paw",
     companyKor: "네오 고양이까페",

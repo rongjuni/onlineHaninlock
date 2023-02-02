@@ -1,5 +1,5 @@
 import "./App.css";
-import CustomerN from "./customers/cust_n";
+import CustomerN from "./main_page/main_page";
 
 function App() {
   return (
