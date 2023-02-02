@@ -71,13 +71,13 @@ const CustomerN = () => {
       {allCustomers.map((customerInfo, i) => {
         return (
           <div key={i}>
-            <img src={customerInfo.image} alt="NuelExpress" className='customer-image' />     
-            <div>{customerInfo.companyEng}</div>
+            <a href={customerInfo.website}><img src={customerInfo.image} alt="NuelExpress" className='customer-image' /></a>
+            <div>{`${customerInfo.companyEng} ${customerInfo.companyKor}`}</div>
             <div>{customerInfo.descriptionEng}</div>
             <div>{customerInfo.contactPerson}</div>
             <div>{customerInfo.phoneNumber}</div>
             <div>{`${customerInfo.addressStreet} ${customerInfo.addressCity} ${customerInfo.addressState} ${customerInfo.addressZip}`}</div>
-
+        
           </div>
         )
        } )}

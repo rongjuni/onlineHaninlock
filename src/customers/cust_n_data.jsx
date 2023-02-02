@@ -16,7 +16,8 @@ let cust_n_data = [
     addressCity: 'Fairfax',
     addressState: 'Virginia',
     addressZip: 22032,
-    businessCategory: 'Freight Forwarding'
+    businessCategory: 'Freight Forwarding',
+    website: "https://www.nuelexpress.com/"
   },
 
   {

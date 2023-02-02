@@ -1,4 +1,5 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import CustomerN from "./main_page/main_page";
 
 function App() {

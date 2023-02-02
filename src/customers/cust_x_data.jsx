@@ -16,7 +16,8 @@ let cust_x_data = [
     addressCity: 'Fairfax',
     addressState: 'Virginia',
     addressZip: 22032,
-    businessCategory: 'makeup product'
+    businessCategory: 'makeup product',
+    website: ''
   },
 
 ];
