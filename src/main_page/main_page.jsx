@@ -67,21 +67,54 @@ const CustomerN = () => {
   let orderCustomers = allCustomers.sort((a, b) => a.companyEng - b.companyEng);
 
   return (
-    <div >
-      {allCustomers.map((customerInfo, i) => {
-        return (
-          <div key={i}>
-            <a href={customerInfo.website}><img src={customerInfo.image} alt="NuelExpress" className='customer-image' /></a>
-            <div>{`${customerInfo.companyEng} ${customerInfo.companyKor}`}</div>
-            <div>{customerInfo.descriptionEng}</div>
-            <div>{customerInfo.contactPerson}</div>
-            <div>{customerInfo.phoneNumber}</div>
-            <div>{`${customerInfo.addressStreet} ${customerInfo.addressCity} ${customerInfo.addressState} ${customerInfo.addressZip}`}</div>
-        
+    <main className="container">
+      <div className='row'>
+        {
+          orderCustomers.map((customers) => { 
+            return(
+              <CustomerCard customers={customers} />
+              )
+          })
+        }
+
+      </div>
+      
+    </main>
+
+
+
+
+  )
+}
+
+
+function CustomerCard( {customers} ) {
+
+  return (
+    <div className='card col-md-3'>
+      <div className='card-body'>
+        <span>
+          <a href={customers.website}><img src={customers.image} alt={customers.companyEng} className='container-customer-image' /></a>
+          
+          <div>{`${customers.addressStreet} ${customers.addressCity} ${customers.addressState} ${customers.addressZip}`}</div>
+
+      
+
+      {/*
+              <div>{`${customerInfo.companyEng} ${customerInfo.companyKor}`}</div>
+              <div>{customerInfo.descriptionEng}</div>
+              <div>{customerInfo.contactPerson}</div>
+              <div>{customerInfo.phoneNumber}</div>
+             
           </div>
-        )
-       } )}
-    </div>
+              )
+              }
+              ) */}
+    </span>
+      </div >
+    </div >
+  
+
   )
 }
 

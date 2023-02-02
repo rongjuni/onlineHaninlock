@@ -1,3 +1,21 @@
-.customer-image{
-    width: 200px;
+.container{
+    background-color: yellow;
+    display:flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 100%;
+    height: 100vh;
+}
+
+
+.container-tile{
+    width: 300px;
+    height: 400px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-customer-image{
+    width: 300px;
+    height: 200px;
 }
