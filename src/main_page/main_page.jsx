@@ -70,9 +70,9 @@ const CustomerN = () => {
     <main className="container">
       <div className='row'>
         {
-          orderCustomers.map((customers) => { 
+          allCustomers.map((customersInfo) => { 
             return(
-              <CustomerCard customers={customers} />
+              <CustomerCard customersInfo={customersInfo} />
               )
           })
         }
@@ -88,28 +88,21 @@ const CustomerN = () => {
 }
 
 
-function CustomerCard( {customers} ) {
+function CustomerCard( {customersInfo} ) {
 
   return (
     <div className='card col-md-3'>
-      <div className='card-body'>
+      <div className='card-body container-tile'>
         <span>
-          <a href={customers.website}><img src={customers.image} alt={customers.companyEng} className='container-customer-image' /></a>
+          <a href={customersInfo.website}><img src={customersInfo.image} alt={customersInfo.companyEng} className='container-customer-image' /></a>
           
-          <div>{`${customers.addressStreet} ${customers.addressCity} ${customers.addressState} ${customers.addressZip}`}</div>
-
-      
-
-      {/*
-              <div>{`${customerInfo.companyEng} ${customerInfo.companyKor}`}</div>
-              <div>{customerInfo.descriptionEng}</div>
-              <div>{customerInfo.contactPerson}</div>
-              <div>{customerInfo.phoneNumber}</div>
-             
-          </div>
-              )
-              }
-              ) */}
+          <div>{`${customersInfo.addressStreet} ${customersInfo.addressCity} ${customersInfo.addressState} ${customersInfo.addressZip}`}</div>
+          <div>{`${customersInfo.companyEng} ${customersInfo.companyKor}`}</div>
+          <div>{customersInfo.descriptionEng}</div>
+          <div>{customersInfo.contactPerson}</div>
+          <div>{customersInfo.phoneNumber}</div>
+            
+            
     </span>
       </div >
     </div >
