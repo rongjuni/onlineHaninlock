@@ -30,10 +30,11 @@ span{
 
 .container-customer-image{
     justify-content: center;
-    width: 300px;
     align-items: center;
     height: 200px;
     margin: auto;
+    width: 100%;
+    
 }
 
 .container-customer-image:hover {
@@ -44,4 +45,11 @@ span{
 
 .customer-desc{
     background-color: red;
+}
+
+
+@media screen and (max-width: 1000px){
+    .container-customer-image {
+
+    }
 }
