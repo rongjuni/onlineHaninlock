@@ -5,8 +5,8 @@ let cust_c_data = [
   {
     id: 'c001',
     contactPerson: "Chloe",
-    companyEng: "Cat Mom. Go Away!",
-    companyKor: "캣맘떠나라",
+    companyEng: "Cat MAMA",
+    companyKor: "캣맘",
     descriptionEng: "Do you have a cat? I have allergy",
     descriptionKor: "고양이와 강아지중 나는 강아지파",
     phoneNumber: '999-999-9999',
@@ -17,7 +17,13 @@ let cust_c_data = [
     addressState: 'Virginia',
     addressZip: 22032,
     businessCategory: 'makeup product',
-    website: ''
+    website: false,
+    category: {
+      cat1: 'cat',
+      cat2: 'pet',
+      cat3: '반묘',
+      cat4: '애완동물',
+    }
   },
 
 ];

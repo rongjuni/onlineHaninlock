@@ -1,7 +1,10 @@
 /* eslint-disable */
 
 import { useState } from "react";
-import "./main_page.css"
+import "./main_page.css";
+import Accordion from 'react-bootstrap/Accordion';
+// import { BsFillPhoneFill } from "react-icons/bs";
+import { BsFillAlarmFill } from "react-icons/bs";
 import customerData_A from "../customers/cust_a_data";
 import customerData_B from "../customers/cust_b_data";
 import customerData_C from "../customers/cust_c_data";
@@ -76,14 +79,8 @@ const CustomerN = () => {
               )
           })
         }
-
       </div>
-      
     </main>
-
-
-
-
   )
 }
 
@@ -94,17 +91,55 @@ function CustomerCard( {customersInfo} ) {
     <div className='card col-md-3'>
       <div className='card-body container-tile'>
         <span>
-          <a href={customersInfo.website}><img src={customersInfo.image} alt={customersInfo.companyEng} className='container-customer-image' /></a>
-          
-          <div>{`${customersInfo.addressStreet} ${customersInfo.addressCity} ${customersInfo.addressState} ${customersInfo.addressZip}`}</div>
-          <div>{`${customersInfo.companyEng} ${customersInfo.companyKor}`}</div>
-          <div>{customersInfo.descriptionEng}</div>
-          <div>{customersInfo.contactPerson}</div>
-          <div>{customersInfo.phoneNumber}</div>
-            
-            
+          <a href={
+            customersInfo == false
+              ? none 
+              : customersInfo.website} target="_blank">
+            <img src={customersInfo.image} alt={customersInfo.companyEng} className='container-customer-image' />
+          </a>
+          <Accordion defaultActiveKey="3">
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>
+                <div className='arc-header'>{`${customersInfo.companyEng} ${customersInfo.companyKor}`}</div>
+              </Accordion.Header>
+              <Accordion.Body>
+               
+                <div className='arc-content'>
+                {/* Iphone Icon Importing*/}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                  <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+                  <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                  </svg>{`  `}
+                  {customersInfo.phoneNumber}
+                </div>
+
+                <div className='arc-content'>
+                  {/* Building Icon Import */}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+                  <path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z"/>
+                  <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1Zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3V1Z"/>
+                  </svg>
+                  {" "}
+                  {`${customersInfo.addressStreet}`}
+                </div>
+                <div>
+                  {`${customersInfo.addressCity} ${customersInfo.addressState} ${customersInfo.addressZip}`}
+                </div>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="1">
+                <Accordion.Header>
+                  <div className='arc-header'>Company</div>
+                </Accordion.Header>
+              <Accordion.Body>
+                <div className='arc-desc'>{customersInfo.descriptionEng}</div>
+                <div className='arc-desc'>{customersInfo.descriptionKor}</div>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
     </span>
-      </div >
+    </div >
     </div >
   
 

@@ -17,9 +17,14 @@ let cust_b_data = [
     addressState: 'Virginia',
     addressZip: 22032,
     businessCategory: 'makeup product',
-    website: ''
+    website: false,
+    category: {
+      cat1: 'music',
+      cat2: 'celebrity',
+      cat3: 'play',
+      cat4: 'k-pop',
+    }
   },
-
 ];
 
 export default cust_b_data;

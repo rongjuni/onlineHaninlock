@@ -1,8 +1,25 @@
 .container{
-    background-color: yellow;
     display:flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
+}
+
+span{
+    align-items: center;
+    justify-content: center;
+}
+
+.arc-header{
+    align-items: center;
+    justify-content: center;
+}
+
+.arc-content{
+    margin: 10px 0;
+}
+
+.arc-desc{
+    margin: 10px 0;
 }
 
 .container-tile{
@@ -16,4 +33,9 @@
     width: 300px;
     align-items: center;
     height: 200px;
+    margin: auto;
+}
+
+.customer-desc{
+    background-color: red;
 }
