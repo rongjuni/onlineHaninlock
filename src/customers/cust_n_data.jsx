@@ -17,7 +17,14 @@ let cust_n_data = [
     addressState: 'Virginia',
     addressZip: 22032,
     businessCategory: 'Freight Forwarding',
-    website: "https://www.nuelexpress.com/"
+    website: "https://www.nuelexpress.com/",
+    category: {
+      cat1: 'music',
+      cat2: 'celebrity',
+      cat3: 'play',
+      cat4: 'k-pop',
+    }
+
   },
 
   {

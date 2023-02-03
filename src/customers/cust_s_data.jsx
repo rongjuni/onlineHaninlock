@@ -16,7 +16,13 @@ let cust_s_data = [
     addressCity: 'Fairfax',
     addressState: 'Virginia',
     addressZip: 22032,
-    businessCategory: 'makeup product'
+    website: false,
+      category: {
+      cat1: 'music',
+      cat2: 'celebrity',
+      cat3: 'play',
+      cat4: 'k-pop',
+    }
   },
 
 ];
