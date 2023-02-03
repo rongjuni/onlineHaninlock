@@ -36,6 +36,12 @@ span{
     margin: auto;
 }
 
+.container-customer-image:hover {
+    transform: scale(0.9);
+    transition-duration: 1s, 15s;
+}
+
+
 .customer-desc{
     background-color: red;
 }

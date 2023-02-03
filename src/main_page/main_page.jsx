@@ -31,6 +31,7 @@ import customerData_W from "../customers/cust_w_data";
 import customerData_X from "../customers/cust_x_data";
 import customerData_Y from "../customers/cust_y_data";
 import customerData_Z from "../customers/cust_z_data";
+import { CheckLg } from "react-bootstrap-icons";
 
 
 const CustomerN = () => {
@@ -91,12 +92,14 @@ function CustomerCard( {customersInfo} ) {
     <div className='card col-md-3'>
       <div className='card-body container-tile'>
         <span>
-          <a href={
-            customersInfo == false
-              ? none 
-              : customersInfo.website} target="_blank">
-            <img src={customersInfo.image} alt={customersInfo.companyEng} className='container-customer-image' />
-          </a>
+          {customersInfo.website == false
+            ? <img src={customersInfo.image} alt={customersInfo.companyEng}
+              className='container-customer-image'
+              onClick={() => { alert('Sorry ' + customersInfo.companyEng +"'s website is not available yet")}} />
+          
+            : <a href={customersInfo.website} target="_blank">
+              <img src={customersInfo.image} alt={customersInfo.companyEng} className='container-customer-image' />
+            </a>}
           <Accordion defaultActiveKey="3">
             <Accordion.Item eventKey="0">
               <Accordion.Header>
